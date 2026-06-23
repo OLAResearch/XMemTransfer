@@ -1,0 +1,10 @@
+{
+  "max_ngram": 3,
+  "heads_per_order": 4,
+  "table_size": 65536,
+  "d_head": 64,
+  "hash_seed": 42,
+  "d_mem": 512,
+  "total_params": 33554432,
+  "canon_mode": "vocab"
+}
