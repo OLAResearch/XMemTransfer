@@ -18,13 +18,13 @@
 ## Framework
 
 <p align="center">
-  <a href="assets/overview.pdf">
-    <img src="assets/overview.png" alt="XMemTransfer framework figure" width="980">
+  <a href="overview.pdf">
+    <img src="overview.png" alt="XMemTransfer framework figure" width="980">
   </a>
 </p>
 
 <p align="center">
-  <a href="assets/overview.pdf"><strong>Open the full framework figure (PDF)</strong></a>
+  <a href="overview.pdf"><strong>Open the full framework figure (PDF)</strong></a>
 </p>
 
 The transfer protocol has two stages:
