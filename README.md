@@ -5,7 +5,7 @@
   <a href="https://huggingface.co/collections/OLAResearchX/xmemtransfer"><img src="https://img.shields.io/badge/Models-Hugging%20Face-F9D649?style=flat-square" alt="Model collection"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-4D7C0F?style=flat-square" alt="Apache 2.0 license"></a>
   <a href="https://github.com/OLAResearch/XMemTransfer/stargazers"><img src="https://img.shields.io/github/stars/OLAResearch/XMemTransfer?style=flat-square" alt="GitHub stars"></a>
-  <a href="https://paperswithcode.com/paper/2608.17050"><img src="https://paperswithcode.com/api/v1/papers/2608.17050/leaderboard-badge-link?eval=26007" alt="Papers with Code: #2 on WikiText-103"></a>
+  <a href="https://paperswithcode.co/benchmark/wikitext-103?task=classic-language-modeling&eval=26007"><img src="https://paperswithcode.co/api/v1/papers/2608.17050/leaderboard-badge.svg?eval=26007" alt="Papers with Code: #2 on WikiText-103"></a>
 </p>
 <p align="center">
   XMemTransfer studies whether a frozen Engram-style external memory remains useful after it is
