@@ -1,20 +1,18 @@
 <h1 align="center">XMemTransfer</h1>
 <p align="center"><strong>Cross-Model Memory Transfer via Target-Side Reader Adaptation</strong></p>
-
 <p align="center">
   <a href="https://olaresearch.github.io/XMemTransfer"><img src="https://img.shields.io/badge/Website-XMemTransfer-0A7EA4?style=flat-square" alt="Project website"></a>
   <a href="https://huggingface.co/collections/OLAResearchX/xmemtransfer"><img src="https://img.shields.io/badge/Models-Hugging%20Face-F9D649?style=flat-square" alt="Model collection"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-4D7C0F?style=flat-square" alt="Apache 2.0 license"></a>
   <a href="https://github.com/OLAResearch/XMemTransfer/stargazers"><img src="https://img.shields.io/github/stars/OLAResearch/XMemTransfer?style=flat-square" alt="GitHub stars"></a>
+  <a href="https://paperswithcode.com/paper/2608.17050"><img src="https://paperswithcode.com/api/v1/papers/2608.17050/leaderboard-badge-link?eval=26007" alt="Papers with Code: #2 on WikiText-103"></a>
 </p>
-
 <p align="center">
   XMemTransfer studies whether a frozen Engram-style external memory remains useful after it is
   detached from the model that trained it and attached to a different backbone. The central result
   is a reader-first view of memory portability: the stored table matters, but successful transfer
   depends on a lightweight target-side reader that can extract and align the signal.
 </p>
-
 ## Framework
 
 <p align="center">
@@ -31,7 +29,6 @@ The transfer protocol has two stages:
 
 1. Train a source-side Engram memory and freeze the learned memory table.
 2. Attach that frozen table to a different target model and train only a lightweight target-side reader.
-
 ## Results Snapshot
 
 Headline results from the saved project artifacts:
@@ -41,7 +38,6 @@ Headline results from the saved project artifacts:
 - A stronger dual-layer 4-branch reader reaches `38.78` average OpenQA score in the saved Mistral artifacts.
 
 Selected intrinsic transfer results:
-
 | Source memory | Target model | Baseline PPL | Transferred PPL | Relative change |
 | --- | --- | ---: | ---: | ---: |
 | Pythia-160M | Pythia-410M | 21.900 | 21.559 | -1.6% |
@@ -52,20 +48,17 @@ Selected intrinsic transfer results:
 | Qwen3.5-0.8B | TinyLlama-1.1B | 10.784 | 9.096 | -15.7% |
 
 Selected downstream gains reported in the paper:
-
 | Target | RTE | BoolQ | OpenBookQA | SciQ | TruthfulQA | RACE |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Qwen3.5-2B | +3.5 +/- 1.9 | +3.9 +/- 1.4 | +0.6 +/- 0.4 | +3.7 +/- 0.6 | -0.5 +/- 0.3 | -0.1 +/- 0.1 |
 | Qwen3.5-9B | +0.7 +/- 0.3 | +0.6 +/- 0.2 | +0.3 +/- 0.3 | +3.2 +/- 0.7 | -0.8 +/- 0.3 | +1.1 +/- 0.2 |
 
 OpenQA highlights from the saved reviewer-validation summary:
-
 | Setting | Average score | Notes |
 | --- | ---: | --- |
 | Cross-model, R4, 30M/30M | 38.78 | Best saved cross-model OpenQA artifact |
 | Same-model, R4 | 38.53 | Same-model reference |
 | Cross-model, R4, 20M/20M | 38.48 | Stronger reader nearly closes the same-model gap |
-
 ## Quickstart
 
 Prerequisites: Python >= 3.11, a CUDA-capable GPU, and `uv`.
@@ -76,11 +69,9 @@ bash run/01_pilot.sh
 ```
 
 The pilot validates the end-to-end pipeline on a compact transfer setting before larger runs.
-
 ## Reproducing the Paper
 
 Experiments are grouped by paper section under `run/`.
-
 | Paper section | Command |
 | --- | --- |
 | Tier 1 same-tokenizer | `bash run/10_tier1_same_tokenizer.sh` |
@@ -93,7 +84,6 @@ Experiments are grouped by paper section under `run/`.
 | Corpus control | `bash run/22_corpus_control.sh` |
 | Baselines | `bash run/30_baselines.sh` |
 | Figures and analysis | `bash run/40_analysis.sh` |
-
 Source memories must be prepared before transfer runs:
 
 ```bash
@@ -101,7 +91,6 @@ bash run/02_source_memories.sh
 ```
 
 See [run/README.md](run/README.md) for runtime estimates and ordering constraints.
-
 ## Repository Layout
 
 ```text
@@ -115,7 +104,6 @@ See [run/README.md](run/README.md) for runtime estimates and ordering constraint
 ├── data/          Saved Phase 0 data and configs
 └── assets/        README figures
 ```
-
 ## GitHub Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=OLAResearch/XMemTransfer&type=Date)](https://star-history.com/#OLAResearch/XMemTransfer&Date)
